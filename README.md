@@ -1,5 +1,5 @@
 # Song-Popularity-Prediction
-This is ma thesis lol
+This repository contains the code for my Bachelor's thesis, titled "*Prediction of song popularity with a textual and audio based approach*", and available for download at http://tesi.luiss.it/31943/.
 
 ## Scraping
 ### Billboard Scraping
