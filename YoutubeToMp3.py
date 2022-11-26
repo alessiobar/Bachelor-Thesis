@@ -1,10 +1,9 @@
-import youtube_dl
+import youtube_dl, os
 from youtubesearchpython import VideosSearch
-import os
-os.chdir(r"C:/Users/alema/Desktop")
 import pandas as pd
+
 df = pd.read_excel('outttt.xlsx')
-os.chdir("Thesis/Tracks")
+os.chdir("./Tracks")
 
 links=[]
 ll=[]
