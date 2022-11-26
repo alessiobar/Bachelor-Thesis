@@ -6,16 +6,16 @@ The thesis proposes a blended approach for predicting song popularity combining 
 ## Data
 Since two different types of analysis are carried out, ie. Text Mining and Audio Mining, two datasets are used: 
 - The first contains lyrics and other song-related features of 4200 different songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. (refer to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee). 
-- The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
+- The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
 
 ## Feature Engineering
 
 
-- one with lyrics and other song-related features, scraped from seven major genres of *Billboard’s digital download rankings*
-- another one with the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
 
 ### Billboard Scraping
 
 
+- one with lyrics and other song-related features, scraped from seven major genres of *Billboard’s digital download rankings*
+- another one with the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
 
 in tutto ciò nella tesi c'era anche R loooool
