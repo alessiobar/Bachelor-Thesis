@@ -11,7 +11,6 @@ from bs4 import BeautifulSoup
 
 genius = lyricsgenius.Genius("< your token here>") #Genius API (free) Access Token
 
-
 def urlFinder():
     """Builds by hand the Billboard URLs"""
     fixd = "https://www.billboard.com/charts/hot-100/" #fixed part of the URL
