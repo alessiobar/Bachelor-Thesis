@@ -2,7 +2,7 @@ import lyricsgenius, os
 import pandas as pd
 
 genius = lyricsgenius.Genius(" < your token here >")
-df = pd.read_excel("Thesis\You_S1_Data_NoBillboardRanking.xlsx")
+df = pd.read_excel("You_S1_Data_NoBillboardRanking.xlsx")
 df["Lyrics"] = 0
 
 def lyricFinder(title, auth):
@@ -15,7 +15,7 @@ def stringNomalizer(title):
         title = title[:title.find("(")-1]
     return title
 
-for x in range(1667, len(df["song"])): #togli il primo numero
+for x in range(len(df["song"])):
     df.song[x] = stringNomalizer(str(df.song[x]))
     try:
         df["Lyrics"][x] = lyricFinder(str(df.song[x]), str(df.artist[x]))
@@ -27,5 +27,5 @@ for x in range(1667, len(df["song"])): #togli il primo numero
             print(" :( ")
             print(df.song[x])
             print(df.artist[x])
-
+            
 df.to_excel("outdataset1.xlsx")
