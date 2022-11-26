@@ -9,7 +9,7 @@ Since two different types of analysis are carried out, ie. Text Mining and Audio
 - The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
 
 ## Feature Engineering
-Most of the variables needed by the models had to be feature engineered, especially for the ones for audio data.
+Most of the variables needed by the models had to be feature engineered, especially the ones for audio data.
 
 Textual Analysis Features:
 - *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting cognitive, affect, social, perceptual, motivation, temporal, swear and
