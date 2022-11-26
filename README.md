@@ -5,10 +5,8 @@ The thesis proposes a blended approach for predicting song popularity combining 
 
 ## Data
 Since two types of analysis are carried out, ie. Text Mining and Audio Mining, there are two datasets: 
-- one with lyrics and other song features, that was originally used by Packard and Berger's paper, made of *Weekly Song Ranking Lists* scraped from *Billboard.com* (specifically, the *Hot 100 Chart*)
-- another one with the audio tracks, downloaded in mp3 format from *Youtube.com*
-
-The former is made of *Weekly Song Ranking List* is scraped from *Billboard.com* (The Hot 100 Chart*)
+- one with lyrics and other song features, scraped from seven major genres of *Billboard’s digital download rankings*
+- another one with the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
 
 ### Billboard Scraping
 run `Billboard Scraper.py`
