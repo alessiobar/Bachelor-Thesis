@@ -24,9 +24,8 @@ for x in range(1667, len(df["song"])): #togli il primo numero
         try:
             df["Lyrics"][x] = lyricFinder(str(df.song[x]), str(df.artist[x]))
         except Exception:
-            print("---")
+            print(" :( ")
             print(df.song[x])
             print(df.artist[x])
-            print("NO")
 
 df.to_excel("outdataset1.xlsx")
