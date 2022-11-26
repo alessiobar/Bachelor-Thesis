@@ -2,7 +2,7 @@
 This script builds the Billboard URLs from scratch, scrapes them sequentially taking the fields of interest
 (ie. songs, artists, lastWeeks, peaks, wksOnCharts), finds the lyrics for each song using the Genius API
 
-Warning: as for any other web scraping script, websites continuosly change, hence the script may have to be fixed in the future
+Warning: this was made in 2021, as for any other web scraping script, since websites continuosly change, it may have to be fixed in the future!
 """
 
 import requests, os, lyricsgenius
