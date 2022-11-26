@@ -14,7 +14,7 @@ Most of the variables needed by the models had to be feature engineered, especia
 Textual Analysis Features:
 - *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and cognitive, affect, social, perceptual, motivation, temporal, swear and relativity word metrics.
 
-- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `aooooooooo.py`), to define 10 topics and word distribution per topic. (see `aooooooooo.py`). After this, song topic composition and average topic composition per genre was computed in order to calculate the *Linguistic Style Matching* (*LSM*).
+- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`), to define 10 topics and word distribution per topic. (see `aooooooooo.py`). After this, song topic composition and average topic composition per genre was computed in order to calculate the *Linguistic Style Matching* (*LSM*).
 
 Audio Analysis Features:
 
