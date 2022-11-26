@@ -9,8 +9,8 @@ import requests, os, lyricsgenius
 import pandas as pd
 from bs4 import BeautifulSoup
 
-genius = lyricsgenius.Genius("IOM90P4leGH-HxQbeNKozTck_pfXfxMNEUZ7tQ05WXLYOOfWX8P5tx1CX5VsXu3p") #Genius API (free) Access Token
-#COMMENTALO OUTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT @@@@@@@@@@@@@@@@@@@@
+genius = lyricsgenius.Genius("< your token here>") #Genius API (free) Access Token
+
 
 def urlFinder():
     """Builds by hand the Billboard URLs"""
@@ -73,7 +73,7 @@ def webScraper(url):
     lyrics=[]
     for x, y in zip(songs, artists):
         y = y.split(",") #not tested Ex-Ante fix for lyrics, before it was just y.
-        y = y[0] #from what i've seen, the API works best w just one artist name, with more it may end up selecting for no appearent reason a translation for the lyrics in a non original vers.
+        y = y[0] #from my experience, the API works best with a single artist name, with more it may end up selecting a translation for the lyrics in a non original vers.
         lyrics.append(lyricFinder(x,y))
     date = url[41:]
     df = pd.DataFrame({"Song":songs, "Artist":artists, "Last Week":lastWeeks, "Peak":peaks, "Weeks on Chart":wksOnCharts,
@@ -81,7 +81,6 @@ def webScraper(url):
     return df
 
 if __name__ == '__main__':
-    ##print(lyricFinder("Wolves","Selena Gomez X Marshmello"))
     out = pd.concat([webScraper(x) for x in urlFinder()])
     out.to_excel("out.xlsx")
 
