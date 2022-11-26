@@ -18,11 +18,3 @@ Textual Analysis Features:
 
 Audio Analysis Features:
 
-
-### Billboard Scraping
-
-
-- one with lyrics and other song-related features, scraped from seven major genres of *Billboard’s digital download rankings*
-- another one with the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
-
-in tutto ciò nella tesi c'era anche R loooool
