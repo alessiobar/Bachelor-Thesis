@@ -11,11 +11,13 @@ Since two different types of analysis are carried out, ie. Text Mining and Audio
 ## Feature Engineering
 Most of the variables needed by the models had to be feature engineered, especially for the ones for audio data.
 
-- Linguistic Inquiry and Word Count (LIWC) 2015 was used for extracting cognitive, affect, social, perceptual, motivation, temporal, swear and
+Textual Analysis Features:
+- *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting cognitive, affect, social, perceptual, motivation, temporal, swear and
 relativity word metrics.
 
-- Latent Dirichlet Allocation (LDA) was performed on lyrics, after some preprocessing (see `aooooooooo.py`), to define 10 topics and word distribution per topic. (see `aooooooooo.py`).
+- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics, after some preprocessing (see `aooooooooo.py`), to define 10 topics and word distribution per topic. (see `aooooooooo.py`). After this, song topic composition and average topic composition per genre was computed in order to calculate the *Linguistic Style Matching* (*LSM*).
 
+Audio Analysis Features:
 
 
 ### Billboard Scraping
