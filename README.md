@@ -5,6 +5,12 @@ The thesis proposes a blended approach for predicting song popularity combining 
 
 ## Data
 Since two types of analysis are carried out, ie. Text Mining and Audio Mining, there are two datasets: 
+- The first contains lyrics and other song-related features of 4200 different songs, it was made available by Berger et al. (*You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq) and was scraped from seven major genres of *Billboard’s digital download rankings*
+
+
+
+
+
 - one with lyrics and other song-related features, scraped from seven major genres of *Billboard’s digital download rankings*
 - another one with the corresponding audio tracks, downloaded in mp3 format from *Youtube.com*
 
