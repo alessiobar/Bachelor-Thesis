@@ -23,6 +23,11 @@ for x in range(len(df["song"])):
         print("zxbmxcvmnxcvxc")
         try:
             df["Lyrics"][x] = lyricFinder(str(df.song[x]), str(df.artist[x]))
+            if len(df["Lyrics"][x]) - df["WC"][x] > 15:
+                print("sus")
+                print(df["Lyrics"][x])
+                print(df["WC"][x])
+                break
         except Exception:
             print(" :( ")
             print(df.song[x])
