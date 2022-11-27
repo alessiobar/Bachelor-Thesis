@@ -1,4 +1,4 @@
-import lyricsgenius, os
+import lyricsgenius, os, time, pickle
 import pandas as pd
 
 genius = lyricsgenius.Genius(" < your token here >")
@@ -15,22 +15,28 @@ def stringNomalizer(title):
         title = title[:title.find("(")-1]
     return title
 
+toDoubleCheck = []
 for x in range(len(df["song"])):
-    df.song[x] = stringNomalizer(str(df.song[x]))
+    print(x)
+    df.loc[x, "song"] = stringNomalizer(str(df.song[x]))
     try:
-        df["Lyrics"][x] = lyricFinder(str(df.song[x]), str(df.artist[x]))
-    except Exception:
-        print("zxbmxcvmnxcvxc")
-        try:
-            df["Lyrics"][x] = lyricFinder(str(df.song[x]), str(df.artist[x]))
-            if len(df["Lyrics"][x]) - df["WC"][x] > 15:
-                print("sus")
-                print(df["Lyrics"][x])
-                print(df["WC"][x])
+        lyrics = lyricFinder(str(df.song[x]), str(df.artist[x]))
+        if len(lyrics.split()) - df["WC"][x] > 100:
+            toDoubleCheck.append((x, df.song[x], df.artist[x]))
+        else: df.loc[x, "Lyrics"] = lyrics
+
+    except Exception as e:
+        print(e)
+        triedTimes = 0
+        while triedTimes<10:
+            if triedTimes > 3: time.sleep(5)
+            try:
+                df.loc[x, "Lyrics"] = lyricFinder(str(df.song[x]), str(df.artist[x]))
                 break
-        except Exception:
-            print(" :( ")
-            print(df.song[x])
-            print(df.artist[x])
-            
-df.to_excel("outdataset1.xlsx")
+            except Exception:
+                print("uff")
+            triedTimes += 1
+
+df.to_excel("outdataset1(2022).xlsx")
+with open('toDoubleCheck.pkl', 'wb') as f:
+    pickle.dump(toDoubleCheck, f)
