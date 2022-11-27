@@ -6,7 +6,7 @@ df = pd.read_excel("You_S1_Data_NoBillboardRanking.xlsx")
 df["Lyrics"] = 0
 
 def lyricFinder(title, auth):
-    print(auth)
+    #print(auth)
     song = genius.search_song(title, auth)
     return song.lyrics
 
@@ -17,7 +17,7 @@ def stringNomalizer(title):
 
 toDoubleCheck = []
 for x in range(len(df["song"])):
-    print(x)
+    #print(x)
     df.loc[x, "song"] = stringNomalizer(str(df.song[x]))
     try:
         lyrics = lyricFinder(str(df.song[x]), str(df.artist[x]))
@@ -34,7 +34,8 @@ for x in range(len(df["song"])):
                 df.loc[x, "Lyrics"] = lyricFinder(str(df.song[x]), str(df.artist[x]))
                 break
             except Exception:
-                print("uff")
+                pass
+                #print("uff")
             triedTimes += 1
 
 df.to_excel("outdataset1(2022).xlsx")
