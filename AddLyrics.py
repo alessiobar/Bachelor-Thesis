@@ -1,3 +1,10 @@
+"""
+This script adds lyrics to the existing Berger et al.'s dataset using the Genius API
+
+Warning: sometimes things may go wrong with the query, 
+BOH CIOÈ FORSE NON HA MANCO SENSO COL TRESHODLD SE QUI DATI SO GIA STOPPATI
+"""
+
 import lyricsgenius, os, time, pickle
 import pandas as pd
 
