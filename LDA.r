@@ -15,7 +15,7 @@ df[is.na(df)] <- "Void"
 df <- subset(df, Lyrics!="Void")
 
 docs1 <- Corpus(VectorSource(df$Lyrics))
-dtm <- DocumentTermMatrix(docs1, control = list(weighting=weightTf, stopwords = TRUE ))
+dtm <- DocumentTermMatrix(docs1, control = list(weighting = weightTf, stopwords = TRUE))
 lda <- LDA(dtm, k = 10, method = "Gibbs", 
             control = list(seed = 42, iter = 5000, verbose = 100, alpha = 5)) 
 
