@@ -1,8 +1,5 @@
 """
 This script adds lyrics to the existing Berger et al.'s dataset using the Genius API
-
-Warning: sometimes things may go wrong with the query, 
-BOH CIOÈ FORSE NON HA MANCO SENSO COL TRESHODLD SE QUI DATI SO GIA STOPPATI
 """
 
 import lyricsgenius, os, time, pickle
@@ -32,17 +29,16 @@ for x in range(len(df["song"])):
             toDoubleCheck.append((x, df.song[x], df.artist[x]))
         else: df.loc[x, "Lyrics"] = lyrics
 
-    except Exception as e:
+    except Exception as e: #mainly HTTPSConnectionPool erros 
         print(e)
         triedTimes = 0
-        while triedTimes<10:
+        while triedTimes < 5:
             if triedTimes > 3: time.sleep(5)
             try:
                 df.loc[x, "Lyrics"] = lyricFinder(str(df.song[x]), str(df.artist[x]))
                 break
             except Exception:
                 pass
-                #print("uff")
             triedTimes += 1
 
 df.to_excel("outdataset1(2022).xlsx")
