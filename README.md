@@ -15,7 +15,7 @@ Textual Analysis Features:
 - *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and many other word metrics directly from lyrics.
 
 - *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
-- *Linguistic Style Matching* (*LSM*) was computed, customizing the original equation to make it measure difference rather than similarity
+- A costumized version of the *Linguistic Style Matching* (*LSM*) equation was computed, (customizing the original equation to make it measure difference rather than similarity)
 
 Audio Analysis Features:
 
