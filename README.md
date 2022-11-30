@@ -25,4 +25,10 @@ Audio Analysis Features:
 
 ## Analysis
 
-ads
+The statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 10 models described in Berger et al. (see also section 4.3 of my thesis).
+
+For the audio analysis instead, 5 models from the Lee et al. paper were reproduced.
+
+
+
+
