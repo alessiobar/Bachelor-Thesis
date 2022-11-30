@@ -22,3 +22,7 @@ Audio Analysis Features:
 - The *Structural Change* of two *Complexity features* computed from scratch (ie. Chroma and Timbre) was calculated as described in Lee et al. (see `aooooooooo.py`). 
 
 - *MFCC* and *Arousal* features were added as described in Lee et al. (see `aooooooooo.py`). 
+
+## Analysis
+
+ads
