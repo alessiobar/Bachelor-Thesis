@@ -12,9 +12,10 @@ Since two different types of analysis are carried out, ie. Text Mining and Audio
 Most of the variables needed by the models had to be feature engineered, especially the ones for audio data.
 
 Textual Analysis Features:
-- *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and cognitive, affect, social, perceptual, motivation, temporal, swear and relativity word metrics.
+- *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and many other word metrics directly from lyrics.
 
-- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py` SI MA NON LO HAI FATTO BRO HAHA, NE HAI FATTO UN ALTRO DI PREPROCESSING SENZA NLTK), to define 10 topics and word distribution per topic. (see `aooooooooo.py`). After this, song topic composition and average topic composition per genre was computed in order to calculate the *Linguistic Style Matching* (*LSM*).
+- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
+- *Linguistic Style Matching* (*LSM*) was computed, customizing the original equation to make it measure difference rather than similarity
 
 Audio Analysis Features:
 
