@@ -30,3 +30,6 @@ RQ1: The statistical significance of the feature engineered variables for the te
 RQ2: Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performances (MSE? MAE? che ho usato?)
 
 ## Results
+
+
+PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo, questa la lascio privata al limite o la cancello
