@@ -25,8 +25,11 @@ Most of the variables had to be feature engineered.
 
 For the **Textual Analysis**, after some preprocessing (which includes *Case Normalization, Tokenization, Stop words removal* and *Lemmatization*), the following features were built:
 
-- The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF-IDF. [fallo in py!, in più tf o tfidf?].
-- Second Person Pronouns and many other word metrics were extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015
+- The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF-IDF. 
+- The number of times a song appeared on the charts.
+- The number of genres a song belongs to.
+- A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period.
+- Second Person Pronouns and other word metrics (eg. *cognitive words*, *affect words*, etc) were extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015
 - *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
 - A costumized version of the *Linguistic Style Matching* (*LSM*) equation was computed, (customizing the original equation to make it measure difference rather than similarity)
 
@@ -51,6 +54,8 @@ RQ2: Three Random Forests and three Support Vector Machines models were built fo
 - Lee, Jong-Seok and Junghyuk Lee (2018), “Music Popularity: Metrics, Characteristics, and Audio-Based Prediction”
 
 .
+[fallo in py!, in più tf o tfidf?].
+LE TOP 100 WORDS DEVO FALLE NEL CODICE STILL ADSJKSDHSAJKD
 
 PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo, questa la lascio privata al limite o la cancello
 
