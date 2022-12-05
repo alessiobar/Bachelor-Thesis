@@ -3,7 +3,7 @@ This repository contains the code of my Bachelor's thesis, titled "*Prediction o
 
 **TL;DR** This thesis proposes a blended approach for predicting song popularity combining some textual based approaches presented in Berger et al. (2018; 2020), with an audio based one suggested in Lee et al. (2018).
 
-For a more extensive description refer to `Thesis.pdf`.
+For a more extensive description refer to the thesis document.
 
 ## Scope
 
@@ -13,9 +13,25 @@ Then, i will expand the analysis by including some audio-based features describe
 
 ## Data
 
-For the **text mining** part, the goal is to rebuild the original dataset used by Berger et al., which contains song-related information about 4200 songs and it was originally scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq).
+For the **text mining** part, the goal is to rebuild the original dataset used by Berger et al., which contains song-related information about 4200 songs and it was originally scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). 
 
-Specifically
+In the specific, the authors scraped the data from different *Billboard's Digital Download Rankings*, ie. 
+
+
+week's most popular downloaded songs, ranked by sales
+
+weekly!!!!!!!!!!
+
+of 7 genres (i.e., christian, country, dance, rock, pop, rap, r&b)
+
+`BillboardScraper.py` was used to 
+
+It was scraped from Billboard’s digital download rankings,
+taking one week every three months for a three years period (i.e., 2014-2016), for seven
+major genres appearing on the website . In
+total, given that each chart contains exactly 50 ranked songs, there are 4200 songs originally
+ranked from 1 to 50 and subsequently reverse coded
+
 
 Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets will be used: 
 - The first contains song-related information about 4200 songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. However, the lyrics were not present and were added using `AddLyrics.py`. (Refer instead to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee).
@@ -53,5 +69,7 @@ RQ2: Three Random Forests and three Support Vector Machines models were built fo
 .
 
 PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo, questa la lascio privata al limite o la cancello
+
+The dataset is made of 161 columns, including: *id, date, genre, song, artist, LDAtopics, *
 
 storytelling
