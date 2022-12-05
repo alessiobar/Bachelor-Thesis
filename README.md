@@ -15,18 +15,18 @@ Then, i will extend the analysis by including some audio-based features describe
 
 The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
 
-To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment. The song lyrics were added instead using `AddLyrics.py`.
+To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment. The song *lyrics* were added instead using `AddLyrics.py`.
 
-The audio tracks, needed for extending the anlysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
+The audio tracks, needed to extend the anlysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
 
 ## Feature Engineering
-Most of the variables needed by the models had to be feature engineered, especially the ones for audio data.
 
-Textual Analysis Features:
+Most of the variables had to be feature engineered.
 
-top 100 parole 
-- *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and many other word metrics directly from lyrics.
+For the **Textual Analysis**, after some preprocessing (which includes *Case Normalization, Tokenization, Stop words removal* and *Lemmatization*), the following features were built:
 
+- The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF-IDF. [fallo in py!, in più tf o tfidf?].
+- Second Person Pronouns and many other word metrics were extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015
 - *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
 - A costumized version of the *Linguistic Style Matching* (*LSM*) equation was computed, (customizing the original equation to make it measure difference rather than similarity)
 
