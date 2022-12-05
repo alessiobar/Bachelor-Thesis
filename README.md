@@ -13,28 +13,15 @@ Then, i will expand the analysis by including some audio-based features describe
 
 ## Data
 
-The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart, quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
+The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
 
-To aquire *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*[!!!].
-
-
-however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee)
-
-digital song sales
-
-*Billboard's Digital Download Rankings* charts, ie. 
+To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*[!!!]. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment).
 
 
 (..For the **text mining** part, i will rebuild t)
 
 
 
-
-It was scraped from Billboard’s digital download rankings,
-taking one week every three months for a three years period (i.e., 2014-2016), for seven
-major genres appearing on the website . In
-total, given that each chart contains exactly 50 ranked songs, there are 4200 songs originally
-ranked from 1 to 50 and subsequently reverse coded
 
 
 Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets will be used: 
