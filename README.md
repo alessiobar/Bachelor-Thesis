@@ -5,11 +5,15 @@ This repository contains the code of my Bachelor's thesis, titled "*Prediction o
 
 ## Scope
 
-The main objective is to verify the propositions presented in Berger et al. (2018; 2020) testing for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). Then, i will expand the analysis by including some audio-based features described in Lee et al. (2018).
+The main objective is to verify the propositions presented in Berger et al. (2018; 2020) testing for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
+
+Then, i will expand the analysis by including some audio-based features described in Lee et al. (2018).
+
+For any doubt refer to `Thesis.pdf`.
 
 ## Data
 
-For the **text mining** part, the goal is to rebuild from scratch the original dataset used by Berger et al., which contains song-related information about 4200 songs and it was originally scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq).
+For the **text mining** part, the goal is to rebuild the original dataset used by Berger et al., which contains song-related information about 4200 songs and it was originally scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq).
 
 Specifically
 
