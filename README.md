@@ -4,7 +4,7 @@ This repository contains the code of my Bachelor's thesis, titled "*Prediction o
 This thesis proposes a blended approach for predicting song popularity combining some textual based approaches presented in Berger et al. (2018; 2020), with an audio based one suggested in Lee et al. (2018).
 
 ## Data
-Since two different types of analysis are carried out, ie. Text Mining and Audio Mining, two datasets are used: 
+Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets are used: 
 - The first contains song-related information about 4200 songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. However, the lyrics were not present and were added using `AddLyrics.py`. (Refer instead to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee).
 - The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
 
