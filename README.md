@@ -29,15 +29,14 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 - The number of times a song appeared on the charts.
 - The number of genres a song belongs to.
 - A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period.
-- Second Person Pronouns and other word metrics (eg. *cognitive words*, *affect words*, etc) were extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015
-- *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
-- A costumized version of the *Linguistic Style Matching* (*LSM*) equation was computed, (customizing the original equation to make it measure difference rather than similarity)
+- Second Person Pronouns and other word metrics (eg. *cognitive words*, *affect words*, etc) extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015.
+- 10 different topics extracted by performing *Latent Dirichlet Allocation* (*LDA*) on lyrics (see `LDA.r`)
+- A custom version of the *Linguistic Style Matching* (*LSM*) equation, readapted for topic composition in order to let it measure difference rather than similarity, and computed using the song topic composition and the average topic composition per genre.
 
-Audio Analysis Features:
+For the **Audio Analysis** instead, the following features were built:
 
-- The *Structural Change* of two *Complexity features* computed from scratch (ie. Chroma and Timbre) was calculated as described in Lee et al. (see `aooooooooo.py`). 
-
-- *MFCC* and *Arousal* features were added as described in Lee et al. (see `aooooooooo.py`). 
+- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) was calculated as described in Lee et al. (see `aoo.py`). 
+- *MFCC* and *Arousal* features were computed as described in Lee et al. (see `aoo.py`). 
 
 ## Analysis
 
@@ -56,7 +55,7 @@ RQ2: Three Random Forests and three Support Vector Machines models were built fo
 .
 [fallo in py!, in più tf o tfidf?].
 LE TOP 100 WORDS DEVO FALLE NEL CODICE STILL ADSJKSDHSAJKD
-
+after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
 PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo, questa la lascio privata al limite o la cancello
 
 The dataset is made of 161 columns, including: *id, date, genre, song, artist, LDAtopics, *
