@@ -9,7 +9,7 @@ The main objective is to verify the propositions presented in Berger et al. (201
 
 Then, i will expand the analysis by including some audio-based features described in Lee et al. (2018).
 
-For any doubt refer to `Thesis.pdf`.
+For a more extensive description refer to `Thesis.pdf`.
 
 ## Data
 
