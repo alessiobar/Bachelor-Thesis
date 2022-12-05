@@ -1,28 +1,26 @@
 # Song-Popularity-Prediction
 This repository contains the code of my Bachelor's thesis, titled "*Prediction of song popularity with a textual and audio based approach*", and available for download at http://tesi.luiss.it/31943/ (alternatively see `Thesis.pdf`).
 
-**TL;DR** This thesis proposes a blended approach for predicting song popularity combining some textual based approaches presented in Berger et al. (2018; 2020), with an audio based one suggested in Lee et al. (2018).
+**TL;DR** This thesis proposes a blended approach for predicting song popularity combining some textual approaches presented in Berger et al. (2018; 2020), with an audio based one suggested in Lee et al. (2018).
 
 For a more extensive description refer to the thesis document.
 
 ## Scope
 
-The main objective is to verify the propositions presented in Berger et al. (2018; 2020) testing for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
+The main objective is to verify the propositions presented in Berger et al. (2018; 2020), testing them for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
 
 Then, i will expand the analysis by including some audio-based features described in Lee et al. (2018).
 
 ## Data
 
-For the **text mining** part, the goal is to rebuild the original dataset used by Berger et al., which contains song-related information about 4200 songs and it was originally scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). 
+The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs, from trimesters of 3 years 
+for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b)
 
-In the specific, the authors scraped the data from different *Billboard's Digital Download Rankings*, ie. 
+*Billboard's Digital Download Rankings* charts, ie. 
 
 
-week's most popular downloaded songs, ranked by sales
+(..For the **text mining** part, i will rebuild t)
 
-weekly!!!!!!!!!!
-
-of 7 genres (i.e., christian, country, dance, rock, pop, rap, r&b)
 
 `BillboardScraper.py` was used to 
 
