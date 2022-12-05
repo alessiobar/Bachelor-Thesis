@@ -7,7 +7,7 @@ For a more extensive description refer to the thesis document.
 
 ## Scope
 
-The main objective is to verify the propositions presented in Berger et al. (2018; 2020), testing them for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
+The main objective is to verify the propositions presented in Berger et al. (2018; 2020) by testing them for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
 
 Then, i will extend the analysis by including some audio-based features described in Lee et al. (2018).
 
@@ -23,6 +23,8 @@ The audio tracks, needed for extending the anlysis, were downloaded in mp3 forma
 Most of the variables needed by the models had to be feature engineered, especially the ones for audio data.
 
 Textual Analysis Features:
+
+top 100 parole 
 - *Linguistic Inquiry and Word Count* (*LIWC*) 2015 was used for extracting Second Person Pronouns and many other word metrics directly from lyrics.
 
 - *Latent Dirichlet Allocation* (*LDA*) was performed on lyrics (see `LDA.r`), after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
