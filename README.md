@@ -9,24 +9,15 @@ For a more extensive description refer to the thesis document.
 
 The main objective is to verify the propositions presented in Berger et al. (2018; 2020), testing them for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
 
-Then, i will expand the analysis by including some audio-based features described in Lee et al. (2018).
+Then, i will extend the analysis by including some audio-based features described in Lee et al. (2018).
 
 ## Data
 
 The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
 
-To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*[!!!]. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment).
+To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment. The song lyrics were added instead using `AddLyrics.py`.
 
-
-(..For the **text mining** part, i will rebuild t)
-
-
-
-
-
-Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets will be used: 
-- The first contains song-related information about 4200 songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. However, the lyrics were not present and were added using `AddLyrics.py`. (Refer instead to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee).
-- The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
+The audio tracks, needed for extending the anlysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
 
 ## Feature Engineering
 Most of the variables needed by the models had to be feature engineered, especially the ones for audio data.
@@ -64,3 +55,15 @@ PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo,
 The dataset is made of 161 columns, including: *id, date, genre, song, artist, LDAtopics, *
 
 storytelling
+
+
+
+(..For the **text mining** part, i will rebuild t)
+
+
+
+
+
+Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets will be used: 
+- The first contains song-related information about 4200 songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. However, the lyrics were not present and were added using `AddLyrics.py`. (Refer instead to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee).
+- The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
