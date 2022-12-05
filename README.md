@@ -17,7 +17,7 @@ The original dataset from Berger et al. contains data about 4200 songs and it wa
 
 To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment. The song *lyrics* were added instead using `AddLyrics.py`.
 
-The audio tracks, needed to extend the anlysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
+The audio tracks, needed to extend the analysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
 
 ## Feature Engineering
 
