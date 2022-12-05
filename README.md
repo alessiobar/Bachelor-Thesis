@@ -13,8 +13,14 @@ Then, i will expand the analysis by including some audio-based features describe
 
 ## Data
 
-The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs, from trimesters of 3 years 
-for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b)
+The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart, quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
+
+To aquire *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*[!!!].
+
+
+however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee)
+
+digital song sales
 
 *Billboard's Digital Download Rankings* charts, ie. 
 
@@ -22,7 +28,7 @@ for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b)
 (..For the **text mining** part, i will rebuild t)
 
 
-`BillboardScraper.py` was used to 
+
 
 It was scraped from Billboard’s digital download rankings,
 taking one week every three months for a three years period (i.e., 2014-2016), for seven
