@@ -44,3 +44,4 @@ PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo,
 ## (Few) References
 - Berger, Jonah and Grant Packard (2020), “Thinking of You: How Second-Person Pronouns Shape Cultural Success”
 - Berger, Jonah and Grant Packard (2018), “Are Atypical Things More Popular?”
+- Lee, Jong-Seok and Junghyuk Lee (2018), “Music Popularity: Metrics, Characteristics, and Audio-Based Prediction”
