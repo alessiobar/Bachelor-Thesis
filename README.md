@@ -27,7 +27,7 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 
 - The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF-IDF. 
 - The number of times a song appeared on the charts.
-- The number of genres a song belongs to.
+- The number of different genres a song belongs to.
 - A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period.
 - Second Person Pronouns and other word metrics (eg. *cognitive words*, *affect words*, etc) extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015.
 - 10 different topics extracted by performing *Latent Dirichlet Allocation* (*LDA*) on lyrics (see `LDA.r`)
