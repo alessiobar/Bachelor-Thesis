@@ -15,7 +15,7 @@ Then, i will extend the analysis by including some audio-based features describe
 
 The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
 
-To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment. The song *lyrics* were added instead using `AddLyrics.py`.
+To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment (sc. Billboard Pro). The song *lyrics* were added instead using `AddLyrics.py`.
 
 The audio tracks, needed to extend the analysis, were downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`).
 
@@ -28,15 +28,16 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 - The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF. 
 - The number of times a song appeared on the charts.
 - The number of different genres a song belongs to.
-- A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period.
+- A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period (again only available, in 2023, with Billboard Pro).
 - Second Person Pronouns and other word metrics (eg. *cognitive words*, *affect words*, etc) extracted using *Linguistic Inquiry and Word Count* (*LIWC*) 2015.
-- 10 different topics extracted by performing *Latent Dirichlet Allocation* (*LDA*) on lyrics (see `LDA.r`)
-- A custom version of the *Linguistic Style Matching* (*LSM*) equation, readapted for topic composition in order to let it measure difference rather than similarity, and computed using the song topic composition and the average topic composition per genre.
+- 10 different topics extracted by performing *Latent Dirichlet Allocation* (*LDA*) on lyrics (see `LDA.r`).
+- A custom version of the *Linguistic Style Matching* (*LSM*) equation, readapted for topic composition in order to measure difference rather than similarity, and computed using the song topic composition and the average topic composition per genre.
 
 For the **Audio Analysis** instead, the following features were built:
 
-- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) was calculated as described in Lee et al. (see `aoo.py`). 
-- *MFCC* and *Arousal* features were computed as described in Lee et al. (see `aoo.py`). 
+- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. (see `aoo.py`). 
+- *MFCC* (ibid.).
+- *Arousal* (ibid.).
 
 ## Analysis
 
