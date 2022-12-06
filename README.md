@@ -25,7 +25,7 @@ Most of the variables had to be feature engineered.
 
 For the **Textual Analysis**, after some preprocessing (which includes *Case Normalization, Tokenization, Stop words removal* and *Lemmatization*), the following features were built:
 
-- The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF-IDF. 
+- The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF. 
 - The number of times a song appeared on the charts.
 - The number of different genres a song belongs to.
 - A boolean value indicating whether a song appeared on the *radio airplay chart* of *Billboard* in that period.
