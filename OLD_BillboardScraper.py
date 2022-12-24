@@ -1,3 +1,6 @@
+
+# BILLBOARDSCRAPER.PY ON GIT == ANOTHASCRAPER.PY ON DRIVE, THIS FILE IS THE BILLBOARDSCRAPER.PY ON DRIVE
+
 """
 This script builds the Billboard URLs from scratch, scrapes them sequentially taking the fields of interest
 (ie. songs, artists, lastWeeks, peaks, wksOnCharts), finds the lyrics for each song using the Genius API
