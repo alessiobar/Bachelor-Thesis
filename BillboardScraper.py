@@ -57,8 +57,7 @@ def webScraper(url, genre):
                         artist = artist[:j - 1] + ", " + artist[j + len(x):]
             artists.append(artist)
         i+=1
-    df = pd.DataFrame(
-        {"Song": songs, "Artist": artists, "Rank":ranks, "Genre":genre})
+    df = pd.DataFrame({"Song": songs, "Artist": artists, "Rank":ranks, "Genre":genre})
     return df
 
 urls = urlFinder()
@@ -69,8 +68,7 @@ for x in urls: #to repeat "a few times" due to Captcha existance :\
     if isinstance(r, pd.DataFrame):
         dfs.append(r)
         urls.remove(x)
-    else:
-        break
+    else: break
 print("remaining: " + str(len(urls)))
 
 out = pd.concat([x for x in dfs])
