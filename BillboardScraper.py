@@ -1,14 +1,14 @@
 """
 This script builds the Billboard URLs from scratch and scrapes them sequentially taking the fields of interest (ie. songs, artists, rank, genre).
 
-Warning: this was made in 2021, as for any other web scraping script, since websites continuosly change, it may have to be fixed in the future!
+Warning: this was made in 2021, as for any other web scraping script, since websites change continuosly, it may have to be fixed in the future!
 """
 
 import requests, os, re
 import pandas as pd
 from bs4 import BeautifulSoup
 
-#To have comparable results, let's take the same weeks that Berger et al. took for their analyses
+#To have comparable results, let's take the same weeks that Berger et al. chose for their analyses
 df_temp = pd.read_excel("You_S1_Data_NoBillboardRanking.xlsx")
 dates = list(df_temp.groupby(['date'])['date'].unique().index.strftime('%Y-%m-%d'))
 
@@ -62,11 +62,9 @@ def webScraper(url, genre):
     return df
 
 urls = urlFinder()
-
-#To Repeat a few times since Captcha exists
 dfs = []
-for x in urls:
-    genre = x[len('https://www.billboard.com/charts/'):-len("/20??-??-??")] #MA CHE È STA ROBA OH? /22
+for x in urls: #to repeat "a few times" due to Captcha existance :\
+    genre = x[len('https://www.billboard.com/charts/'):-len("/20??-??-??")]
     r = webScraper(x, genre)
     if isinstance(r, pd.DataFrame):
         dfs.append(r)
@@ -75,5 +73,5 @@ for x in urls:
         break
 print("remaining: " + str(len(urls)))
 
-#urls = [x[:len('https://www.billboard.com/charts/rap-streaming-song')] + "s" + x[len('https://www.billboard.com/charts/rap-streaming-song'):] for x in urls]
 out = pd.concat([x for x in dfs])
+out.to_excel("out.xlsx")
