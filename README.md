@@ -8,12 +8,11 @@ For a more extensive description refer to the thesis document.
 ## Scope
 
 The main objective is to verify the propositions presented in Berger et al. (2018; 2020) by testing them for statistical significance, and to be able to generalize their approach to any new data. Hence i will reproduce their analysis from scratch (starting from data collection). 
-
 Then, i will extend the analysis by including some audio-based features described in Lee et al. (2018).
 
 ## Data
 
-The original dataset from Berger et al. contains data about 4200 songs and it was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
+The original dataset from Berger et al. contains data about 4200 songs and was scraped from *Billboard.com* (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq). In the specific, the authors scraped the weekly most popular downloaded songs chart (top-50), quarterly for 3 years, and for 7 major genres (i.e., christian, country, dance, rock, pop, rap, r&b).
 
 To aquire the *Billboard*'s data refer to `BillboardScraper.py`, which returns the following columns: *song name, artist name, genre, date and rank*. However notice that, as of now (2023) and unlike few years ago, the *Digital Song Sales charts* are only accessible upon a monthly payment (sc. Billboard Pro). The song *lyrics* were added instead using `AddLyrics.py`.
 
