@@ -2,14 +2,13 @@ import youtube_dl, os
 from youtubesearchpython import VideosSearch
 import pandas as pd
 
-df = pd.read_excel('outttt.xlsx')
+df = pd.read_excel('out1.xlsx')
 os.chdir("./Tracks")
 
-links=[]
-ll=[]
+links, ll = [], []
 for x in range(len(df["Song_ID"])):
     ll.append(df["Song"][x]+" - "+df["Artist"][x])
-ll=list(set(ll)) #to remove double entries
+ll = list(set(ll)) #to remove double entries
 
 for x in ll:
     videosSearch = VideosSearch(x, limit = 1)
