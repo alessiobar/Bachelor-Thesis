@@ -27,7 +27,7 @@ for x in range(len(df["song"])):
             toDoubleCheck.append((x, df.song[x], df.artist[x]))
         else: df.loc[x, "Lyrics"] = lyrics
 
-    except Exception as e: #mainly HTTPSConnectionPool erros 
+    except Exception as e: #mainly HTTPSConnectionPool errors 
         print(e)
         triedTimes = 0
         while triedTimes < 5:
