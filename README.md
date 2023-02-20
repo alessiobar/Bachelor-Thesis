@@ -22,7 +22,7 @@ The audio tracks, needed to extend the analysis, were downloaded in mp3 format f
 
 Most of the variables had to be feature engineered.
 
-For the **Textual Analysis**, after some preprocessing (which includes *Case Normalization, Tokenization, Stop words removal* and *Lemmatization*), the following features were built:
+For the **Textual Analysis**, after some preprocessing (which includes *Case Normalization, Tokenization, Stop words removal* and *Lemmatization*) the following features were built:
 
 - The top 100 words appearing across all songs (excl. second-person pronouns) computed using TF. 
 - The number of times a song appeared on the charts.
