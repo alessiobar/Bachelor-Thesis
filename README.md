@@ -32,7 +32,7 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 - 10 different topics extracted by performing *Latent Dirichlet Allocation* (*LDA*) on lyrics (see `LDA.r`).
 - A custom version of the *Linguistic Style Matching* (*LSM*) equation, readapted for topic composition in order to measure difference rather than similarity, and computed using the song topic composition and the average topic composition per genre.
 
-For the **Audio Analysis** instead, the following features were built:
+For the **Audio Analysis** instead, the following features were built (by far the most technical part, that required some signal processing skills):
 
 - The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. (see `aoo.py`). 
 - *Arousal* (ibid.).
@@ -40,36 +40,15 @@ For the **Audio Analysis** instead, the following features were built:
 
 ## Analysis
 
-RQ1: The statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 10 models described in Berger et al. (see also section 4.3 of my thesis). For the audio analysis instead, 5 models from the Lee et al. paper were reproduced.
+RQ1: Check the statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 10 models described in Berger et al. (see also section 4.3 of my thesis). For the audio analysis instead, 5 models from the Lee et al. paper were reproduced.
 
 RQ2: Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performances (MSE? MAE? che ho usato?)
 
 ## Results
-...
+
+Everything is explained thoroughly in my thesis (cf. section 5 and 6).
 
 ## (Few) References
 - Berger, Jonah and Grant Packard (2020), “Thinking of You: How Second-Person Pronouns Shape Cultural Success”
 - Berger, Jonah and Grant Packard (2018), “Are Atypical Things More Popular?”
 - Lee, Jong-Seok and Junghyuk Lee (2018), “Music Popularity: Metrics, Characteristics, and Audio-Based Prediction”
-
-.
-[fallo in py!, in più tf o tfidf?].
-LE TOP 100 WORDS DEVO FALLE NEL CODICE STILL ADSJKSDHSAJKD
-after some preprocessing (see `preprocessLDA.py`, to define 10 topics and word distribution per topic. (see `aooooooooo.py`). 
-PS se non voglio che si vedano i commit, posso crearne diretto un altra di repo, questa la lascio privata al limite o la cancello
-
-The dataset is made of 161 columns, including: *id, date, genre, song, artist, LDAtopics, *
-
-storytelling
-
-
-
-(..For the **text mining** part, i will rebuild t)
-
-
-
-
-
-Since two different types of analyses are carried out, ie. Text Mining and Audio Mining, two datasets will be used: 
-- The first contains song-related information about 4200 songs, it was made available by Berger et al. (see *You_S1_Data_NoBillboardRanking.csv* at https://osf.io/cbguq), and it was scraped originally from *Billboard.com*. However, the lyrics were not present and were added using `AddLyrics.py`. (Refer instead to `BillboardScraper.py` to acquire any new/different data; however notice that, as of now (2022), the *Digital Song Sales charts* are accessible only by paying a monthly fee).
-- The other one contains the corresponding audio tracks, downloaded in mp3 format from *Youtube.com* (see `YoutubeToMp3.py`)
