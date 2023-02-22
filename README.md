@@ -50,7 +50,7 @@ Refer to `Thesis_Notebook.ipynb`.
 
 ## Results
 
-Everything is explained thoroughly in my thesis (cf. section 5 and 6).
+Everything is explained thoroughly in Section 5 and 6 of `Thesis.pdf`
 
 ## (Few) References
 - Berger, Jonah and Grant Packard (2020), “Thinking of You: How Second-Person Pronouns Shape Cultural Success”
