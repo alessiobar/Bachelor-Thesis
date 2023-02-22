@@ -40,13 +40,17 @@ For the **Audio Analysis** instead, the following features were built (by far th
 
 ## Research Questions
 
-RQ1: Check the statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 10 models described in Berger et al. (see also section 4.3 of my thesis). For the audio analysis instead, 5 models from the Lee et al. paper were reproduced.
+1) Are the propositions present in Berger and Packard 2020 and Berger and Packard 2018 verified for statistical significance, as well as the ones in Lee and Lee 2018?
 
-RQ2: Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performances (MSE? MAE? che ho usato?)
+2) How could best performances be achieved on the song popularity prediction task? Which variables should the best model include?
 
 ## Analysis
 
-Refer to `Thesis_Notebook.ipynb`.
+1) The statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 9 models described in Berger et al. (see also section 4.3 of my thesis). For the audio analysis instead, 4 models from the Lee et al. paper were reproduced.
+
+2) Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performance.
+
+For the implementation please refer to `Thesis_Notebook.ipynb`.
 
 ## Results
 
