@@ -50,7 +50,7 @@ For the **Audio Analysis** instead, the following features were built (by far th
 
 2) Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performance.
 
-For the implementation please refer to `Thesis_Notebook.ipynb`.
+For the actual implementation please refer to `Thesis_Notebook.ipynb`.
 
 ## Results
 
