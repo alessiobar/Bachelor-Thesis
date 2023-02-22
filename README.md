@@ -34,7 +34,7 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 
 For the **Audio Analysis** instead, the following features were built (by far the most technical part, that required some signal processing skills):
 
-- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. (see `aoo.py`). 
+- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. (see `Thesis_Notebook.ipynb`). 
 - *Arousal* (ibid.).
 - *MFCC* (ibid.).
 
