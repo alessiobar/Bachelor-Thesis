@@ -34,15 +34,19 @@ For the **Textual Analysis**, after some preprocessing (which includes *Case Nor
 
 For the **Audio Analysis** instead, the following features were built (by far the most technical part, that required some signal processing skills):
 
-- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. (see `Thesis_Notebook.ipynb`). 
+- The *Structural Change* of two *Complexity Features* (ie. Chroma and Timbre) as described in Lee et al. 
 - *Arousal* (ibid.).
 - *MFCC* (ibid.).
 
-## Analysis
+## Research Questions
 
 RQ1: Check the statistical significance of the feature engineered variables for the textual analysis was checked using an Ordinary Least Squares linear (OLS) regression, reproducing 10 models described in Berger et al. (see also section 4.3 of my thesis). For the audio analysis instead, 5 models from the Lee et al. paper were reproduced.
 
 RQ2: Three Random Forests and three Support Vector Machines models were built for predicting song’s rank, tuning the hyperparameters using GridSearchCV and selecting the best one in terms of performances (MSE? MAE? che ho usato?)
+
+## Analysis
+
+Refer to `Thesis_Notebook.ipynb`.
 
 ## Results
 
